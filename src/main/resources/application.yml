@@ -4,11 +4,7 @@
 #  build-url: "http://travis-ci.org/@env.TRAVIS_REPO_SLUG@/builds/@env.TRAVIS_BUILD_ID@"
 #  stage: test
 server:
-  port: 80
   context-path: "/spring/admin"
-
-logging:
-  file: "target/boot-admin-sample.log"
 
 management:
   context-path: "/actuator"
@@ -19,7 +15,7 @@ spring:
   boot:
     admin:
 #      context-path: /
-      url: http://localhost:80/spring/admin
+      url: ${admin.domain}spring/admin
   profiles:
     active:
       - secure

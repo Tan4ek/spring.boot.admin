@@ -9,4 +9,9 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-Можно и нужно задавать пользователя через параметр запуска, аля: --auth.name=vasa_pupkin -- auth.pass=xer_ugodaesh
+Можно и нужно задавать пользователя через параметр запуска, аля: --auth.name=vasa_pupkin -- auth.pass=xer_ugodaesh --admin.domain=http://localhost:8080/ (с '/' в конце)
+
+Для развернывания в heroku добавить config vars:
+* AUTH_NAME=auth.name
+* AUTH_PASS=auth.pass
+* ADMIN_DOMAIN=admin.domain
